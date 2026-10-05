@@ -1,0 +1,846 @@
+/* Урок 1    Начало     Шапка сайта */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+
+    /* стили для подключения google шрифта Raleway */
+    font-family: 'Raleway', sans-serif;
+
+    /* .google-sans-<uniquifier> {
+        font-family: "Google Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings:
+            "GRAD" 0;
+    }
+
+    .raleway-<uniquifier> {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+    }     */
+}
+
+/* Прижать футер к низу окна браузера */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {}
+
+.main {
+    flex-grow: 1;
+}
+
+.footer {}
+
+/* конец прижать футер к низу окна браузера */
+
+.logo {
+    background: #000;
+    width: 100%;
+    /* height: 110px; */
+    /* высоту задавать не нужно - иначе при значении ширины 360 пикселей и меньше, 
+    блок .logo не масштабируется, тоесть не сжимается, при уменьшении окна браузера */
+    display: flex;
+    justify-content: center;
+}
+
+.logo a {}
+
+.grafic_logo {
+    padding: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; - после установки этого свойства для img исчезает 
+    горизонтальный скроллер для ширины 360 пикселов и меньше, 
+    Ну и максимальная ширина - должна быть указана в 100% */
+    /* border-box; это такое свойство которое изменяет алгоритмы расчёта ширины и высоты
+    элемента, свойства width и height включают в себя значение полей и границ, кроме 
+    отступов */
+}
+
+nav {
+    margin: 0 auto;
+    max-width: 860px;
+    /* задаём значение ширины max-width: 860px, 
+    если задать значение width:860px, то появится горизонтальный скроллер при ширине 860 
+    пикселей и меньше */
+    height: 50px;
+    padding-top: 10px;
+    /* border: 1px solid red; */
+}
+
+.top_nav {
+    background: #fff;
+    font-size: 16px;
+    margin-top: 15px;
+    /* border: 1px solid green; */
+    text-align: center;
+    /* центрирует меню */
+}
+
+.top_nav a {
+    color: #000;
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 16px;
+}
+
+.top_nav a:hover {
+    border-bottom: 2px solid #000;
+}
+
+.top_nav .icon {
+    display: none;
+}
+
+
+/* Урок 2    Вёрстка на флексбокс    Адаптивное изображение    Преимущества */
+
+.mw-100 {
+    max-width: 100%;
+    /* стиль для адаптивного изображения */
+}
+
+.block_adapt_img {
+    background: #d9d9d9;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    /* центрирование содержимого блока для изображения */
+}
+
+.advantages_container {
+    display: flex;
+    justify-content: center;
+    /* background: red; */
+}
+
+.anvantages {
+    /* width: 860px; */
+    width: 80%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.advantages_items {
+    width: 30%;
+    /* border: 1px solid red; */
+}
+
+
+/* Урок 3    Футер */
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    color: #fff;
+    /* border: 1px solid red; */
+}
+
+/* меню в футере */
+
+footer nav {
+    margin: 0 auto;
+    max-width: 860px;
+    /* задаём значение ширины max-width: 860px, 
+    если задать значение width:860px, то появится горизонтальный скроллер при ширине 860 
+    пикселей и меньше */
+    height: 50px;
+    /* border: 1px solid red; */
+}
+
+.footer_top_nav {
+    background: #000;
+    font-size: 16px;
+    margin-top: 15px;
+    /* border: 1px solid green; */
+    text-align: center;
+    /* центрирует меню */
+}
+
+.footer_top_nav a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 16px;
+}
+
+.footer_top_nav a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.footer_top_nav .icon {
+    display: none;
+}
+
+/* конец меню в футере  */
+
+footer a {
+    color: #fff;
+}
+
+footer .logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer .logo .grafic_logo {
+    padding: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.social {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    /* width: 280px;    */
+    max-width: 280px;
+    /* width: 80%; */
+    /* если значение ширины указано в пикселях, width: 280px; то блок .social a не 
+    переходит на следующюю строку (при уменьшении ширины окна браузера) по свойству 
+    flex-wrap: wrap; 
+    Чтоб был переход на следующюю строку используйте значение либо max-width: 280px;
+    либо width: 80%; */
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social a {
+    margin-left: 10px;
+}
+
+/* .social img {
+    margin-left: 10px; 
+    display: block;
+    width: 42px;
+    height: 42px;
+}
+
+.social img:hover {
+    background: url('../images/Icon_social_1_hover.png');  
+    background: #ff0000;       
+    z-index: 10;    
+} */
+
+.social .img_link_1 {
+    background: url('../images/Icon_social_1.png');
+    /* Исходное изображение */
+    display: block;
+    /* Преобразуем ссылку в блочный элемент */
+    width: 42px;
+    /* Ширина ссылки */
+    height: 42px;
+    /* Высота ссылки */
+}
+
+.social .img_link_1:hover {
+    background: url('../images/Icon_social_1_hover.png');
+    /* Исходное изображение */
+}
+
+.social .img_link_2 {
+    background: url('../images/Icon_social_2.png');
+    /* Исходное изображение */
+    display: block;
+    /* Преобразуем ссылку в блочный элемент */
+    width: 42px;
+    /* Ширина ссылки */
+    height: 42px;
+    /* Высота ссылки */
+}
+
+.social .img_link_2:hover {
+    background: url('../images/Icon_social_2_hover.png');
+    /* Исходное изображение */
+}
+
+.social .img_link_3 {
+    background: url('../images/Icon_social_3.png');
+    /* Исходное изображение */
+    display: block;
+    /* Преобразуем ссылку в блочный элемент */
+    width: 42px;
+    /* Ширина ссылки */
+    height: 42px;
+    /* Высота ссылки */
+}
+
+.social .img_link_3:hover {
+    background: url('../images/Icon_social_3_hover.png');
+    /* Исходное изображение */
+}
+
+.social .img_link_4 {
+    background: url('../images/Icon_social_4.png');
+    /* Исходное изображение */
+    display: block;
+    /* Преобразуем ссылку в блочный элемент */
+    width: 42px;
+    /* Ширина ссылки */
+    height: 42px;
+    /* Высота ссылки */
+}
+
+.social .img_link_4:hover {
+    background: url('../images/Icon_social_4_hover.png');
+    /* Исходное изображение */
+}
+
+.social .img_link_5 {
+    background: url('../images/Icon_social_5.png');
+    /* Исходное изображение */
+    display: block;
+    /* Преобразуем ссылку в блочный элемент */
+    width: 42px;
+    /* Ширина ссылки */
+    height: 42px;
+    /* Высота ссылки */
+}
+
+.social .img_link_5:hover {
+    background: url('../images/Icon_social_5_hover.png');
+    /* Исходное изображение */
+}
+
+.footer_text {
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+/* Урок 4    Страница Project */
+
+.gallery {
+    /* width: 80%; */
+    max-width: 1200px;
+    /* Нужно установить свойство max-width: 1100px; или max-width:80%; 
+    если указать значение width:1100px то появится горизонтальный скроллер */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+}
+
+.photo_item {
+    /* width: 23%;  */
+    /* Если поставить ширину в 25% появляется горизонтальный скроллер */
+}
+
+.photo_item img {
+    box-sizing: border-box;
+    padding: 5px;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.photo_item img:hover {
+    opacity: 1;
+}
+
+/* Урок 5    Делаем Блог */
+
+.blog_container {
+    background: #ededed;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+    /* font-weight: 400; */
+    margin: 25px auto;
+    padding-bottom: 10px;
+    /* margin: 0 auto; */
+    max-width: 860px;
+    /* border: 1px solid blue; */
+}
+
+.blog_container a:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+.blog_cover {
+    background: url('../images/Img_blog.png');
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+    height: 150px;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 18px;
+    /* border: 1px solid green; */
+}
+
+.blog_body {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.blog_title {
+    margin: 12px 0 5px 0;
+}
+
+.blog_title h1 a {
+    color: #333;
+    font-weight: normal;
+}
+
+.blog_text p {
+    color: #4d4d4d;
+    margin: 0 0 18px 0;
+}
+
+.blog_tags ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    /* margin-top: 15px; */
+    /* border: 1px solid blue; */
+}
+
+.blog_tags li {
+    /* margin-left: 15px; */
+    margin: 4px 0px 8px 12px;
+}
+
+.blog_tags li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.blog_tags a {
+    border: 1px solid #999999;
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: #999999;
+    font-size: 15px;
+    /* height: 18px;
+    line-height: 18px;
+    letter-spacing: 1px; */
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.blog_footer {
+    /* padding: 10px 0 0px 0; */
+    border-bottom: 1px solid #999999;
+    margin: 0 auto;
+    padding: 8px 0 10px 0;
+    margin-bottom: 10px;
+    /* padding-bottom: 8px;
+    padding-top: 10px;
+    margin-bottom: 10px; */
+    width: 90%;
+}
+
+.blog_footer ul {
+    list-style: none;
+    display: flex;
+    flex: row wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+}
+
+.blog_footer li {
+    color: #999999;
+    font-size: 15px;
+    height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+}
+
+.publication_date {
+    border: 1px solid #999999;
+    border-radius: 3px;
+    padding: 4px 10px 2px 10px;
+}
+
+/* Урок 6    Вставляем google карты */
+
+#map {
+    max-width: 860px;
+    margin: 0 auto;
+    /* border: 1px solid rgb(13, 255, 0); */
+}
+
+.map_header {
+    margin: 5px auto;
+    /* border: 1px solid green; */
+}
+
+.map_header h3 {
+    margin-left: 20px;
+    text-align: left;
+    /* border: 1px solid red; */
+    font-weight: normal;
+}
+
+.map_img_and_text {
+    max-width: 860px;
+    /* border: 1px solid blue; */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+    /* border: 1px solid red; */
+}
+
+
+/* Урок 7    Контактная форма */
+
+.form_container {
+    max-width: 860px;
+    margin: 10px auto;
+    /* border: 1px solid red; */
+}
+
+.form {
+    width: 50%;
+    margin: 10px auto;
+    /* border: 1px solid green; */
+}
+
+.feedback_input {
+    color: #000;
+    /* font-weight: normal; */
+    font-size: 15px;
+    line-height: 24px;
+    /* высота строки, без высоты букв */
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    /* Если это свойство не указано, то к значению ширины
+    прибавляются и значения padding-ов для ширины, в нашем случае это 10px + 10px, */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    border-bottom: 1px solid #000;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+
+}
+
+.button_submit {
+    /* float: left; */
+    width: 100%;
+    border: 0px solid transparent;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: all 0.3s;
+    height: 44px;
+    /* margin-top: -4px; */
+    /* font-weight: 100; */
+}
+
+.button_submit:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+/* Урок 8    О компании    Сервис */
+
+.about_container {
+    max-width: 860px;
+    margin: 10px auto;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.about_container img {
+    display: block;
+    max-width: 100%;
+}
+
+.about_container p {
+    margin-top: 10px;
+}
+
+.about_container h1 {
+    margin-top: 10px;
+}
+
+/* Урок 8    Сервис */
+
+.services_container {
+    max-width: 860px;
+    margin: 10px auto;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.services_container img {
+    display: block;
+    max-width: 100%;
+}
+
+.services_blocks {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px 15px;
+    /* border: 1px solid green; */
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.services_item_block {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* Урок 1    Начало     Шапка сайта */
+
+@media screen and (max-width:768px) {
+    .top_nav a:not(:first-child) {
+        display: none;
+    }
+
+    .top_nav a.icon {
+        display: block;
+        float: right;
+        margin-top: -17px;
+        color: #000;
+    }
+
+    nav {
+        max-width: 100%;
+        /* при значении width:100% появляется горизонтальный скроллер, при ширине 768 
+        пикселей и меньше,
+        если использовать значение max-width:100%, то горизонтального скроллера нет */
+        height: 50px;
+    }
+
+    .top_nav.responsive {
+        position: relative;
+    }
+
+    .top_nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top_nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Урок 2    Вёрстка на флексбокс    Адаптивное изображение    Преимущества */
+
+@media screen and (max-width:760px) {
+    .advantages_items {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .anvantages {
+        flex-direction: column;
+    }
+
+    .advantages_items {
+        width: 100%;
+    }
+}
+
+
+/* Урок 3    Футер */
+
+@media screen and (max-width:768px) {
+
+    .footer_top_nav a:not(:first-child) {
+        display: none;
+    }
+
+    .footer_top_nav a.icon {
+        display: block;
+        float: right;
+        margin-top: -17px;
+        color: #fff;
+    }
+
+    footer nav {
+        max-width: 100%;
+        /* при значении width:100% появляется горизонтальный скроллер, при ширине 768 
+        пикселей и меньше,
+        если использовать значение max-width:100%, то горизонтального скроллера нет */
+        height: 50px;
+    }
+
+    .footer_top_nav.responsive {
+        position: relative;
+    }
+
+    .footer_top_nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .footer_top_nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* Урок 4    Страница Project */
+/* здесь можно обойтись даже без медиа запросов */
+
+/* @media screen and (max-width:768px) {
+    .photo_item {
+        width: 45%;        
+    }
+}
+
+@media screen and (max-width:420px) {
+    .photo_item {
+        width: 90%;
+        display: flex;
+        justify-content: center;       
+    }
+} */
+
+
+/* Урок 5    Делаем Блог */
+
+@media screen and (max-width:920px) {
+    .blog_container {
+        width: 90%;
+    }
+}
+
+/* @media screen and (max-width:420px) {
+    .blog_container {
+         width: 80%;
+    }
+} */
+
+
+/* Урок 6    Вставляем google карты */
+
+@media screen and (max-width:920px) {
+    #map {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .text-overlay {
+        font-size: 14px;
+    }
+}
+
+
+/* Урок 7    Контактная форма */
+
+@media screen and (max-width:600px) {
+    .form {
+        width: 70%;
+    }
+}
+
+/* Урок 7    Контактная форма */
+
+/* Урок 8    Страница О компании */
+
+@media screen and (max-width:940px) {
+    .about_container {
+        width: 90%;
+    }
+}
+
+/* Урок 8    Страница Сервис */
+
+@media screen and (max-width:940px) {
+    .services_container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .services_blocks {
+        grid-template-columns: auto;
+        grid-gap: 15px 15px;
+    }
+}
